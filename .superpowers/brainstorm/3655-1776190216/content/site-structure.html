@@ -1,0 +1,103 @@
+<h2>Solstice Farm — Site Architecture</h2>
+<p class="subtitle">Full site with 6 pages. Modern & clean aesthetic. Built for a 15-min presentation.</p>
+
+<div class="section">
+  <h3>Pages</h3>
+  <div class="options">
+    <div class="option">
+      <div class="letter">1</div>
+      <div class="content">
+        <h3>Home</h3>
+        <p>Hero with tagline, mission snapshot, seasonal highlights, featured products, CTA to shop/subscribe</p>
+      </div>
+    </div>
+    <div class="option">
+      <div class="letter">2</div>
+      <div class="content">
+        <h3>About / Our Philosophy</h3>
+        <p>Farm story, organic principles, team/founder section, sustainability commitment. Key assignment content: why organic, why local, why less meat</p>
+      </div>
+    </div>
+    <div class="option">
+      <div class="letter">3</div>
+      <div class="content">
+        <h3>Products</h3>
+        <p>Seasonal produce grid (spring/summer/fall/winter), weekly veggie box subscription, pricing tiers</p>
+      </div>
+    </div>
+    <div class="option">
+      <div class="letter">4</div>
+      <div class="content">
+        <h3>Sustainability</h3>
+        <p>Carbon footprint data, local vs imported comparison, meat industry impact stats, plant-based diet benefits. Heavy assignment content lives here</p>
+      </div>
+    </div>
+    <div class="option">
+      <div class="letter">5</div>
+      <div class="content">
+        <h3>Events</h3>
+        <p>Upcoming events calendar — farm tours, cooking workshops, sustainability talks, seasonal festivals</p>
+      </div>
+    </div>
+    <div class="option">
+      <div class="letter">6</div>
+      <div class="content">
+        <h3>Contact</h3>
+        <p>Location map, hours, contact form, newsletter signup, social links</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Shared Components</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px;">
+      <strong>Navigation</strong><br>
+      <span style="color: #888;">Sticky top bar — logo left, links right, mobile hamburger</span>
+    </div>
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px;">
+      <strong>Footer</strong><br>
+      <span style="color: #888;">Farm info, quick links, newsletter signup, social icons</span>
+    </div>
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px;">
+      <strong>CTA Banner</strong><br>
+      <span style="color: #888;">Reusable "subscribe to veggie box" section</span>
+    </div>
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px;">
+      <strong>Season Badge</strong><br>
+      <span style="color: #888;">Spring/Summer/Fall/Winter tag component</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Design Direction</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;">
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="display:flex; gap:6px; justify-content:center; margin-bottom:8px;">
+        <div style="width:32px;height:32px;border-radius:50%;background:#2d5016;"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:#5a7a3a;"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:#f5f0e1;"></div>
+        <div style="width:32px;height:32px;border-radius:50%;background:#d4a556;"></div>
+      </div>
+      <strong>Colors</strong><br>
+      <span style="color: #888;">Deep green, sage, cream, warm gold</span>
+    </div>
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-family: Georgia, serif; font-size: 20px; margin-bottom: 8px;">Aa Bb</div>
+      <strong>Typography</strong><br>
+      <span style="color: #888;">Serif headings, clean sans body</span>
+    </div>
+    <div style="background: #f8f8f8; border-radius: 8px; padding: 16px; text-align: center;">
+      <div style="font-size: 20px; margin-bottom: 8px;">◻ ◻ ◻</div>
+      <strong>Layout</strong><br>
+      <span style="color: #888;">Generous whitespace, full-width sections, grid cards</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Tech Stack</h3>
+  <p style="color: #888;">Next.js 16 (App Router) · Tailwind CSS · TypeScript · Static pages (no backend) · Google Fonts (Inter + Playfair Display)</p>
+</div>
