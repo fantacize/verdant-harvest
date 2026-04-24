@@ -101,13 +101,6 @@ const dictionary = {
       { title: "Thriving Biodiversity", description: "Our fields are home to over forty species of native pollinators, songbirds, and beneficial insects. We maintain wildflower borders, hedgerows, and undisturbed habitat patches that give wildlife a place to nest and forage. A biodiverse farm is a resilient farm, naturally resistant to pests and disease without chemical intervention." },
       { title: "Superior Nutrition", description: "Produce grown in healthy, mineral rich soil simply contains more of the vitamins, antioxidants, and micronutrients your body needs. Studies consistently show that organically grown fruits and vegetables have higher concentrations of beneficial compounds because the plant develops its own natural defenses rather than relying on chemical sprays." },
     ],
-    localEyebrow: "Rooted Here",
-    localHeading: "A short walk between field and table",
-    localBody: [
-      "Every mile that food travels before it reaches your plate costs the planet something. Refrigerated trucks burn diesel. Cargo planes burn jet fuel. Warehouses run cold storage around the clock. By the time an imported tomato lands on a supermarket shelf, it may have generated dozens of times the carbon emissions of one grown twenty minutes down the road. At Solstice Farm, the distance from our fields to your kitchen is measured in minutes, not in time zones.",
-      "Shorter transport means fresher produce. Our vegetables are harvested the same morning they arrive at farmers markets and local pickup points, so they retain the full spectrum of flavor, texture, and nutritional value that longer supply chains slowly strip away. There is no wax coating, no gas ripening, and no weeks spent in cold storage. What you receive is food in its most honest form, picked at peak ripeness and delivered with nothing added and nothing lost.",
-      "Choosing local also means choosing your neighbors. Every dollar spent at Solstice Farm stays in the Richmond community, supporting fair wages for our team, investing in land stewardship, and strengthening the network of small farms and local businesses that make this region vibrant. When you buy from us, you are not funding a distant supply chain. You are investing in the place where you live, building a food system that is resilient, transparent, and accountable to the people it serves.",
-    ],
   },
   team: {
     heroEyebrow: "Our Team",

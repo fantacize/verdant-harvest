@@ -69,21 +69,6 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      <hr className="border-border max-w-6xl mx-auto w-full" />
-
-      <section className="py-24 md:py-32 bg-background">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-2xl fade-in">
-            <p className="eyebrow eyebrow-dot">{a.localEyebrow}</p>
-            <h2 className="font-display text-4xl md:text-5xl text-foreground mt-6 leading-[1.05] tracking-[-0.01em]">{a.localHeading}</h2>
-          </div>
-          <div className="max-w-2xl mt-12 space-y-8 fade-in">
-            {a.localBody.map((p, i) => (
-              <p key={i} className="text-base md:text-lg leading-relaxed text-muted">{p}</p>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }
