@@ -1,30 +1,26 @@
-import type { Metadata } from "next";
-import { Cormorant_Garamond, Raleway, Geist } from "next/font/google";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import "./globals.css";
+import { Playfair_Display, Inter, Noto_Serif_SC } from "next/font/google";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-const cormorantGaramond = Cormorant_Garamond({
-  variable: "--font-cormorant-garamond",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Solstice Farm — Organic, Local, Sustainable",
-  description:
-    "Solstice Farm grows certified organic produce using regenerative practices. We bring fresh, seasonal harvests straight from our fields to your table, nurturing the land and the community we call home.",
-};
+const notoSerifSC = Noto_Serif_SC({
+  variable: "--font-noto-serif",
+  weight: ["400", "700"],
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -33,14 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={cn("h-full", "antialiased", "scroll-smooth", cormorantGaramond.variable, raleway.variable, "font-sans", geist.variable)}
+      lang="zh-Hans"
+      data-scroll-behavior="smooth"
+      className={cn(
+        "h-full antialiased",
+        playfair.variable,
+        inter.variable,
+        notoSerifSC.variable,
+        "font-sans"
+      )}
     >
-      <body className="min-h-full flex flex-col">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }
