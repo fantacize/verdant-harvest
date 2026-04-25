@@ -53,35 +53,38 @@ export default function SubscribeForm({ dict }: Props) {
     window.location.assign(mailtoUrl);
   }
 
+  const inputClass = "h-12 rounded-xl border-border bg-surface px-4 text-base placeholder:text-subtle/50 focus-visible:border-accent focus-visible:ring-accent/30";
+  const selectClass = "h-12 w-full rounded-xl border border-border bg-surface px-4 text-base text-foreground outline-none transition focus:border-accent focus:ring-4 focus:ring-accent/15";
+
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <label htmlFor="subscribe-name" className="text-sm font-medium text-foreground">{s.nameLabel}</label>
-          <Input id="subscribe-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={s.namePlaceholder} autoComplete="name" className="h-12 rounded-xl border-green-light/30 bg-white px-4 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+          <Input id="subscribe-name" value={name} onChange={(e) => setName(e.target.value)} placeholder={s.namePlaceholder} autoComplete="name" className={inputClass} />
         </div>
         <div className="space-y-2">
           <label htmlFor="subscribe-email" className="text-sm font-medium text-foreground">{s.emailLabel}</label>
-          <Input id="subscribe-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={s.emailPlaceholder} autoComplete="email" inputMode="email" className="h-12 rounded-xl border-green-light/30 bg-white px-4 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+          <Input id="subscribe-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={s.emailPlaceholder} autoComplete="email" inputMode="email" className={inputClass} />
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         <div className="space-y-2">
           <label htmlFor="subscribe-plan" className="text-sm font-medium text-foreground">{s.planLabel}</label>
-          <select id="subscribe-plan" value={plan} onChange={(e) => setPlan(e.target.value)} className="h-12 w-full rounded-xl border border-green-light/30 bg-white px-4 text-base text-foreground outline-none transition focus:border-green-mid focus:ring-4 focus:ring-green-mid/15">
+          <select id="subscribe-plan" value={plan} onChange={(e) => setPlan(e.target.value)} className={selectClass}>
             {planOptions.map((option) => <option key={option} value={option}>{option}</option>)}
           </select>
         </div>
         <div className="space-y-2">
           <label htmlFor="subscribe-cadence" className="text-sm font-medium text-foreground">{s.cadenceLabel}</label>
-          <select id="subscribe-cadence" value={cadence} onChange={(e) => setCadence(e.target.value)} className="h-12 w-full rounded-xl border border-green-light/30 bg-white px-4 text-base text-foreground outline-none transition focus:border-green-mid focus:ring-4 focus:ring-green-mid/15">
+          <select id="subscribe-cadence" value={cadence} onChange={(e) => setCadence(e.target.value)} className={selectClass}>
             {s.cadenceOptions.map((option) => <option key={option} value={option}>{option}</option>)}
           </select>
         </div>
         <div className="space-y-2">
           <label htmlFor="subscribe-fulfillment" className="text-sm font-medium text-foreground">{s.fulfillmentLabel}</label>
-          <select id="subscribe-fulfillment" value={fulfillment} onChange={(e) => setFulfillment(e.target.value)} className="h-12 w-full rounded-xl border border-green-light/30 bg-white px-4 text-base text-foreground outline-none transition focus:border-green-mid focus:ring-4 focus:ring-green-mid/15">
+          <select id="subscribe-fulfillment" value={fulfillment} onChange={(e) => setFulfillment(e.target.value)} className={selectClass}>
             {s.fulfillmentOptions.map((option) => <option key={option} value={option}>{option}</option>)}
           </select>
         </div>
@@ -89,13 +92,13 @@ export default function SubscribeForm({ dict }: Props) {
 
       <div className="space-y-2">
         <label htmlFor="subscribe-notes" className="text-sm font-medium text-foreground">{s.notesLabel}</label>
-        <Textarea id="subscribe-notes" rows={5} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={s.notesPlaceholder} className="min-h-[140px] rounded-xl border-green-light/30 bg-white px-4 py-3 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+        <Textarea id="subscribe-notes" rows={5} value={notes} onChange={(e) => setNotes(e.target.value)} placeholder={s.notesPlaceholder} className="min-h-[140px] rounded-xl border-border bg-surface px-4 py-3 text-base placeholder:text-subtle/50 focus-visible:border-accent focus-visible:ring-accent/30" />
       </div>
 
       <div className="space-y-3">
-        <Button type="submit" className="h-12 rounded-full bg-warm px-8 text-base font-medium text-white transition-colors hover:bg-warm-dark">{s.submitButton}</Button>
-        <p className="text-sm leading-relaxed text-text-muted">{s.submitNote}</p>
-        <div aria-live="polite" className="min-h-6 text-sm text-green-deep">{status}</div>
+        <Button type="submit" className="h-12 rounded-full bg-accent hover:bg-accent-hover px-8 text-base font-medium text-white transition-colors">{s.submitButton}</Button>
+        <p className="text-sm leading-relaxed text-muted">{s.submitNote}</p>
+        <div aria-live="polite" className="min-h-6 text-sm text-accent">{status}</div>
       </div>
     </form>
   );

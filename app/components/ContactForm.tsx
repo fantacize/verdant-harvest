@@ -19,6 +19,8 @@ type FormState = {
 
 const initialState: FormState = { name: "", email: "", subject: "", message: "" };
 
+const inputClass = "h-12 rounded-xl border-border bg-surface px-4 text-base placeholder:text-subtle/50 focus-visible:border-accent focus-visible:ring-accent/30";
+
 export default function ContactForm({ dict }: Props) {
   const [formState, setFormState] = useState<FormState>(initialState);
   const [error, setError] = useState("");
@@ -60,26 +62,26 @@ export default function ContactForm({ dict }: Props) {
     <form className="space-y-6" onSubmit={handleSubmit}>
       <div className="space-y-2">
         <label htmlFor="name" className="text-sm font-medium text-foreground">{c.nameLabel}</label>
-        <Input type="text" id="name" name="name" value={formState.name} onChange={(event) => updateField("name", event.target.value)} placeholder={c.namePlaceholder} autoComplete="name" className="h-12 rounded-xl border-green-light/30 bg-white px-4 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+        <Input type="text" id="name" name="name" value={formState.name} onChange={(event) => updateField("name", event.target.value)} placeholder={c.namePlaceholder} autoComplete="name" className={inputClass} />
       </div>
       <div className="space-y-2">
         <label htmlFor="email" className="text-sm font-medium text-foreground">{c.emailLabel}</label>
-        <Input type="email" id="email" name="email" value={formState.email} onChange={(event) => updateField("email", event.target.value)} placeholder={c.emailPlaceholder} autoComplete="email" inputMode="email" className="h-12 rounded-xl border-green-light/30 bg-white px-4 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+        <Input type="email" id="email" name="email" value={formState.email} onChange={(event) => updateField("email", event.target.value)} placeholder={c.emailPlaceholder} autoComplete="email" inputMode="email" className={inputClass} />
       </div>
       <div className="space-y-2">
         <label htmlFor="subject" className="text-sm font-medium text-foreground">{c.subjectLabel}</label>
-        <Input type="text" id="subject" name="subject" value={formState.subject} onChange={(event) => updateField("subject", event.target.value)} placeholder={c.subjectPlaceholder} className="h-12 rounded-xl border-green-light/30 bg-white px-4 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+        <Input type="text" id="subject" name="subject" value={formState.subject} onChange={(event) => updateField("subject", event.target.value)} placeholder={c.subjectPlaceholder} className={inputClass} />
       </div>
       <div className="space-y-2">
         <label htmlFor="message" className="text-sm font-medium text-foreground">{c.messageLabel}</label>
-        <Textarea id="message" name="message" rows={6} value={formState.message} onChange={(event) => updateField("message", event.target.value)} placeholder={c.messagePlaceholder} className="min-h-[160px] resize-y rounded-xl border-green-light/30 bg-white px-4 py-3 text-base placeholder:text-text-muted/50 focus-visible:border-green-mid focus-visible:ring-green-mid/30" />
+        <Textarea id="message" name="message" rows={6} value={formState.message} onChange={(event) => updateField("message", event.target.value)} placeholder={c.messagePlaceholder} className="min-h-[160px] resize-y rounded-xl border-border bg-surface px-4 py-3 text-base placeholder:text-subtle/50 focus-visible:border-accent focus-visible:ring-accent/30" />
       </div>
       <div className="space-y-3">
-        <Button type="submit" className="h-12 rounded-full bg-green-deep px-8 text-base font-medium text-white transition-colors hover:bg-green-mid">{c.submitButton}</Button>
-        <p className="text-sm leading-relaxed text-text-muted">{c.submitNote}</p>
+        <Button type="submit" className="h-12 rounded-full bg-accent hover:bg-accent-hover px-8 text-base font-medium text-white transition-colors">{c.submitButton}</Button>
+        <p className="text-sm leading-relaxed text-muted">{c.submitNote}</p>
         <div aria-live="polite" className="min-h-6 text-sm">
           {error ? <p className="text-red-700">{error}</p> : null}
-          {!error && submitted ? <p className="text-green-deep">{c.successMessage}</p> : null}
+          {!error && submitted ? <p className="text-accent">{c.successMessage}</p> : null}
         </div>
       </div>
     </form>

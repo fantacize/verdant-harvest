@@ -225,7 +225,7 @@ export default async function ProductsPage({
       {/* 2. Full-bleed image */}
       <div className="img-zoom w-full">
         <Image
-          src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1600&h=600&fit=crop"
+          src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1600&h=600&fit=crop"
           alt="Baskets of fresh farm produce"
           width={1600}
           height={600}
